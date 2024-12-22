@@ -39,15 +39,15 @@ Before you start, ensure the following are in place:
 
  ![image](https://github.com/user-attachments/assets/d46aa0f6-3453-4304-be45-c9e3fd11593c)
  
-4. ➕ Click **`+ Add`** to create a new lock.  
+3. ➕ Click **`+ Add`** to create a new lock.  
    - 🏷️ **`Name`**: Provide a meaningful name (e.g., **`SubscriptionDeleteLock`**).  
    - 🔑 **`Lock Type`**: Select **`Read-Only`** or **`Delete`**.  
    - 📝 **`Notes`**: Add a description of why you're applying the lock.  
-5. ✅ Click **`OK`** to save the lock.  
+4. ✅ Click **`OK`** to save the lock.  
 
 ![image](https://github.com/user-attachments/assets/4ff97ea5-0ffe-4c03-adc3-92a666bf857e)
 
- - Successfully created.
+ - Successfully created and applied.
 
 ![image](https://github.com/user-attachments/assets/f80866b7-8593-4e06-b55a-5f2d08f46db3)
 
@@ -65,22 +65,39 @@ If you only have one suscription, delete the previous lock before testing the re
 
 ![image](https://github.com/user-attachments/assets/31220b99-cd22-40f6-8cc8-def076fa87f6)
 
-4. ➕ Click **`+ Add`** to create a lock.  
+3. ➕ Click **`+ Add`** to create a lock.  
    - 🏷️ **`Name`**: Provide a meaningful name (e.g., `RGProtectionLock`).  
-   - 🔑 **Lock Type**: Select **`ReadOnly`** or **`Delete`**.  
+   - 🔑 **Lock Type**: Select **`Read-Only`** or **`Delete`**.  
    - 📝 **`Notes`**: Add relevant details.  
-5. ✅ Click **`OK`** to save the lock.  
+4. ✅ Click **`OK`** to save the lock.  
+
+![image](https://github.com/user-attachments/assets/629f2cfa-b80a-4f0a-84c3-797e5be0f25e)
+
+ - Successfully created and applied.
+
+![image](https://github.com/user-attachments/assets/54a1af03-c023-4378-beca-8d336aba7d3b)
+
+ - Now, test the inheritance to confirm it works properly by deleting an individual resource within the resource group you have applied the Read-Only lock.
+
+![image](https://github.com/user-attachments/assets/4465d5d9-a8cd-444c-8f29-5ce95ce91867)
 
 ---
 
 ### 4️⃣ **Apply a Lock at the Individual Resource Level**  
+
+If you only have one resource group, delete the previous lock before testing the individual resource level lock. For the sake fo this demo, I deletde the previous Lock at the resource group level.
 1. 🔍 Navigate to the specific resource (e.g., **`Virtual Machine, Storage Account, Virtual network`**).  
-2. 🔒 Under **`Settings`**, click **`Locks`**.  
+2. 🔒 Under **`Settings`**, click **`Locks`**.
+
+![image](https://github.com/user-attachments/assets/5ec2c235-4eb4-4cde-982c-5ab1e521c49e)
+
 3. ➕ Click **`+ Add`** to create a lock.  
-   - 🏷️ **`Name`**: Provide a meaningful name (e.g., **`VMReadOnlyLock`**).  
+   - 🏷️ **`Name`**: Provide a meaningful name (e.g., **`VnetDeleteLock`**).  
    - 🔑 **`Lock Type`**: Select **`Read-Only`** or **`Delete`**.  
    - 📝 **`Notes`**: Add relevant details.  
 4. ✅ Click **`OK`** to save the lock.  
+
+![image](https://github.com/user-attachments/assets/ccb92b59-9f05-44ef-8e79-4b31620207a3)
 
 ---
 
