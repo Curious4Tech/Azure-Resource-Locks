@@ -47,8 +47,8 @@ Before you start, ensure the following are in place:
 
 ![image](https://github.com/user-attachments/assets/4ff97ea5-0ffe-4c03-adc3-92a666bf857e)
 
- - Successfully created and applied.
-
+- 📋 Return to the **`Resource locks`** blade for the  **`subscription`** level.
+- ✅ Confirm the lock is listed with the correct details.  
 ![image](https://github.com/user-attachments/assets/f80866b7-8593-4e06-b55a-5f2d08f46db3)
 
 - Now, test the inheritance to confirm it works properly by deleting a resource group or resource within the subscription you have applied the delete lock.
@@ -73,8 +73,8 @@ If you only have one suscription, delete the previous lock before testing the re
 
 ![image](https://github.com/user-attachments/assets/629f2cfa-b80a-4f0a-84c3-797e5be0f25e)
 
- - Successfully created and applied.
-
+ - 📋 Return to the **`Locks`** blade for the  **`Resource Group`** level.
+ - ✅ Confirm the lock is listed with the correct details.  
 ![image](https://github.com/user-attachments/assets/54a1af03-c023-4378-beca-8d336aba7d3b)
 
  - Now, test the inheritance to confirm it works properly by deleting an individual resource within the resource group you have applied the Read-Only lock.
@@ -98,6 +98,14 @@ If you only have one resource group, delete the previous lock before testing the
 4. ✅ Click **`OK`** to save the lock.  
 
 ![image](https://github.com/user-attachments/assets/ccb92b59-9f05-44ef-8e79-4b31620207a3)
+
+ - 📋 Return to the **`Locks`** blade for the  **`Resource`** level.
+ - ✅ Confirm the lock is listed with the correct details.  
+![image](https://github.com/user-attachments/assets/6355cf68-64ea-4d10-9d90-4f5b604a4e4b)
+
+ - Now, test to confirm it works properly by deleting the individual resource on which you have applied the Delete lock.
+
+![image](https://github.com/user-attachments/assets/000087f5-1987-479a-a9a7-54fd26fc44e4)
 
 ---
 
