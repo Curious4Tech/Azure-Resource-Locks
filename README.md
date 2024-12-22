@@ -8,18 +8,18 @@ This repository provides a step-by-step guide to applying Azure resource locks a
 Before you start, ensure the following are in place:  
 
 1. **Azure Subscription**  
-   - 🟢 You must have an active Azure subscription.  
-   - 🔑 Ensure you have sufficient permissions (Owner or User Access Administrator) to manage locks.  
+   - 🟢 You must have at least one **`active Azure subscription`**.  
+   - 🔑 Ensure you have sufficient permissions (**`Owner or User Access Administrator`**) to manage locks.  
 
 2. **Resource Group**  
    - 📦 A resource group should already exist in your subscription.  
-   - ➕ If you don't have one, create it by navigating to **Resource Groups** in the Azure portal and selecting **+ Create**.
+   - ➕ If you don't have one, create it by navigating to **`Resource Groups`** in the Azure portal and selecting **`+ Create`**.
 
 3. **Resources**  
-   - 💡 Deploy at least one resource (e.g., Virtual Machines, Storage Accounts, or App Services) in your resource group.
+   - 💡 Deploy at least one resource (e.g., **`Virtual Machines, Storage Accounts, or Virtual network`**) in your resource group.
 
 4. **Permissions**  
-   - 👤 Verify that your account has **Owner** or **User Access Administrator** roles at the scope where you want to apply the lock (subscription, resource group, or individual resource).  
+   - 👤 Verify that your account has **`Owner`** or **`User Access Administrator`** roles at the scope where you want to apply the lock (subscription, resource group, or individual resource).  
 
 ---
 
@@ -45,35 +45,35 @@ Before you start, ensure the following are in place:
 ### 3️⃣ **Apply a Lock at the Resource Group Level**  
 1. 📦 Search for **Resource Groups** and select your desired resource group.  
 2. 🔒 Click **Locks** from the left-hand menu.  
-3. ➕ Click **+ Add** to create a lock.  
-   - 🏷️ **Name**: Provide a meaningful name (e.g., `RGProtectionLock`).  
-   - 🔑 **Lock Type**: Select **ReadOnly** or **CanNotDelete**.  
-   - 📝 **Notes**: Add relevant details.  
-4. ✅ Click **OK** to save the lock.  
+3. ➕ Click **`+ Add`** to create a lock.  
+   - 🏷️ **`Name`**: Provide a meaningful name (e.g., `RGProtectionLock`).  
+   - 🔑 **Lock Type**: Select **`ReadOnly`** or **`Delete`**.  
+   - 📝 **`Notes`**: Add relevant details.  
+4. ✅ Click **`OK`** to save the lock.  
 
 ---
 
 ### 4️⃣ **Apply a Lock at the Individual Resource Level**  
-1. 🔍 Navigate to the specific resource (e.g., Virtual Machine, Storage Account).  
-2. 🔒 Under **Settings**, click **Locks**.  
-3. ➕ Click **+ Add** to create a lock.  
-   - 🏷️ **Name**: Provide a meaningful name (e.g., `VMReadOnlyLock`).  
-   - 🔑 **Lock Type**: Select **ReadOnly** or **CanNotDelete**.  
-   - 📝 **Notes**: Add relevant details.  
-4. ✅ Click **OK** to save the lock.  
+1. 🔍 Navigate to the specific resource (e.g., **`Virtual Machine, Storage Account, Virtual network`**).  
+2. 🔒 Under **`Settings`**, click **`Locks`**.  
+3. ➕ Click **`+ Add`** to create a lock.  
+   - 🏷️ **`Name`**: Provide a meaningful name (e.g., **`VMReadOnlyLock`**).  
+   - 🔑 **`Lock Type`**: Select **`Read-Only`** or **`Delete`**.  
+   - 📝 **`Notes`**: Add relevant details.  
+4. ✅ Click **`OK`** to save the lock.  
 
 ---
 
 ### 5️⃣ **Verify the Applied Lock**  
-- 📋 Return to the **Locks** blade for the respective level (subscription, resource group, or resource).  
+- 📋 Return to the **`Locks`** blade for the respective level (**`subscription, resource group, or resource`**).  
 - ✅ Confirm the lock is listed with the correct details.  
 
 ---
 
 ### 6️⃣ **Test the Lock Behavior**  
-- 🛑 **For ReadOnly locks**:  
+- 🛑 **For Read-Only locks**:  
   - Modifications should fail, but resources remain accessible in read-only mode.  
-- 🛡️ **For CanNotDelete locks**:  
+- 🛡️ **For Delete locks**:  
   - Deletions should fail, but modifications are allowed.  
 
 ---
@@ -81,15 +81,15 @@ Before you start, ensure the following are in place:
 ### 🗑️ **Removing or Modifying Locks**  
 1. Navigate to the **Locks** blade of the respective resource level.  
 2. 🖱️ Select the lock you want to remove or modify.  
-3. ❌ Click **Delete** to remove the lock or edit its properties.  
+3. ❌ Click **`Delete`** to remove the lock or edit its properties.  
 
 ---
 
 ## ℹ️ **Additional Notes**  
 
-- 🌍 Locks applied at the **subscription level** inherit automatically to all child resources, including resource groups and individual resources.  
-- 🛠️ Locks at a **lower level** (e.g., resource group) add additional restrictions without overriding higher-level locks.  
-- 🔑 **Permissions**: Only accounts with **Owner** or **User Access Administrator** roles can manage locks.  
+- 🌍 Locks applied at the **`subscription level`** inherit automatically to all child resources, including resource groups and individual resources.  
+- 🛠️ Locks at a **`lower level`** (e.g., resource group) add additional restrictions without overriding higher-level locks.  
+- 🔑 **`Permissions`**: Only accounts with **Owner** or **`User Access Administrator`** roles can manage locks.  
 
 ---
 
