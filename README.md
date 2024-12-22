@@ -77,7 +77,7 @@ If you only have one suscription, delete the previous lock before testing the re
  - ✅ Confirm the lock is listed with the correct details.  
 ![image](https://github.com/user-attachments/assets/54a1af03-c023-4378-beca-8d336aba7d3b)
 
- - Now, test the inheritance to confirm it works properly by deleting an individual resource within the resource group you have applied the Read-Only lock.
+ - Now, test the inheritance to confirm it works properly by modifying an individual resource within the resource group you have applied the Read-Only lock.
 
 ![image](https://github.com/user-attachments/assets/4465d5d9-a8cd-444c-8f29-5ce95ce91867)
 
