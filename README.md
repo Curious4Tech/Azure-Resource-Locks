@@ -109,13 +109,7 @@ If you only have one resource group, delete the previous lock before testing the
 
 ---
 
-### 5️⃣ **Verify the Applied Lock**  
-- 📋 Return to the **`Locks`** blade for the respective level (**`subscription, resource group, or resource`**).  
-- ✅ Confirm the lock is listed with the correct details.  
-
----
-
-### 6️⃣ **Test the Lock Behavior**  
+### 5️⃣ **Test the Lock Behavior**  
 - 🛑 **For Read-Only locks**:  
   - Modifications should fail, but resources remain accessible in read-only mode.  
 - 🛡️ **For Delete locks**:  
@@ -126,7 +120,10 @@ If you only have one resource group, delete the previous lock before testing the
 ### 🗑️ **Removing or Modifying Locks**  
 1. Navigate to the **Locks** blade of the respective resource level.  
 2. 🖱️ Select the lock you want to remove or modify.  
-3. ❌ Click **`Delete`** to remove the lock or edit its properties.  
+3. ❌ Click **`Delete`** to remove the lock or edit its properties.
+4. Example for an individual resource.
+   
+![image](https://github.com/user-attachments/assets/302563eb-4d17-465e-86a0-209299336271)
 
 ---
 
@@ -135,6 +132,7 @@ If you only have one resource group, delete the previous lock before testing the
 - 🌍 Locks applied at the **`subscription level`** inherit automatically to all child resources, including resource groups and individual resources.  
 - 🛠️ Locks at a **`lower level`** (e.g., resource group) add additional restrictions without overriding higher-level locks.  
 - 🔑 **`Permissions`**: Only accounts with **Owner** or **`User Access Administrator`** roles can manage locks.  
+- ⚖️ **`Precedence of Azure Resource Locks`**  : If a resource has locks applied at both the subscription and resource group levels, the most restrictive lock prevails. For example, if the subscription has a **`Read-Only`** lock and the resource group has a **`Delete`** lock, the **`Read-Only`** lock takes precedence, preventing both modifications and deletions.
 
 ---
 
