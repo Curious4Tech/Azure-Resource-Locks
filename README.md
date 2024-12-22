@@ -21,6 +21,8 @@ Before you start, ensure the following are in place:
 4. **Permissions**  
    - 👤 Verify that your account has **`Owner`** or **`User Access Administrator`** roles at the scope where you want to apply the lock (subscription, resource group, or individual resource).  
 
+![image](https://github.com/user-attachments/assets/83c2a4a7-03da-4d60-9bb7-277791076c55)
+
 ---
 
 ## 🛠️ **Step-by-Step Guide**  
@@ -32,24 +34,42 @@ Before you start, ensure the following are in place:
 ---
 
 ### 2️⃣ **Apply a Lock at the Subscription Level**  
-1. 🗂️ Search for **Subscriptions** in the portal and select your subscription.  
-2. 🔒 Click **Locks** from the left-hand menu.  
-3. ➕ Click **+ Add** to create a new lock.  
-   - 🏷️ **Name**: Provide a meaningful name (e.g., `SubscriptionDeleteLock`).  
-   - 🔑 **Lock Type**: Select **ReadOnly** or **CanNotDelete**.  
-   - 📝 **Notes**: Add a description of why you're applying the lock.  
-4. ✅ Click **OK** to save the lock.  
+1. 🗂️ Search for **`Subscriptions`** in the portal and select your subscription.  
+2. 🔒Expand **`Settings`** and then click **`Resource locks`** from the left-hand menu.
+
+ ![image](https://github.com/user-attachments/assets/d46aa0f6-3453-4304-be45-c9e3fd11593c)
+ 
+4. ➕ Click **`+ Add`** to create a new lock.  
+   - 🏷️ **`Name`**: Provide a meaningful name (e.g., **`SubscriptionDeleteLock`**).  
+   - 🔑 **`Lock Type`**: Select **`Read-Only`** or **`Delete`**.  
+   - 📝 **`Notes`**: Add a description of why you're applying the lock.  
+5. ✅ Click **`OK`** to save the lock.  
+
+![image](https://github.com/user-attachments/assets/4ff97ea5-0ffe-4c03-adc3-92a666bf857e)
+
+ - Successfully created.
+
+![image](https://github.com/user-attachments/assets/f80866b7-8593-4e06-b55a-5f2d08f46db3)
+
+- Now, test the inheritance to confirm it works properly by deleting a resource group or resource within the subscription you have applied the delete lock.
+
+![image](https://github.com/user-attachments/assets/49bd9a2e-473d-4f72-972e-be6fdfac78b1)
 
 ---
 
 ### 3️⃣ **Apply a Lock at the Resource Group Level**  
+
+If you only have one suscription, delete the previous lock before testing the resource group level lock. For the sake fo this demo, I deletde the previous Lock at the subscription level.
 1. 📦 Search for **Resource Groups** and select your desired resource group.  
-2. 🔒 Click **Locks** from the left-hand menu.  
-3. ➕ Click **`+ Add`** to create a lock.  
+2. 🔒 Expand **`Settings`** and then click **Locks** from the left-hand menu.
+
+![image](https://github.com/user-attachments/assets/31220b99-cd22-40f6-8cc8-def076fa87f6)
+
+4. ➕ Click **`+ Add`** to create a lock.  
    - 🏷️ **`Name`**: Provide a meaningful name (e.g., `RGProtectionLock`).  
    - 🔑 **Lock Type**: Select **`ReadOnly`** or **`Delete`**.  
    - 📝 **`Notes`**: Add relevant details.  
-4. ✅ Click **`OK`** to save the lock.  
+5. ✅ Click **`OK`** to save the lock.  
 
 ---
 
